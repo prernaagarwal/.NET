@@ -20,7 +20,7 @@ public partial class _Default : System.Web.UI.Page
         HttpCookie cookie1 = new HttpCookie("user");
         cookie1.Values["username"] = txtusername.Text;
         cookie1.Values["password"] = txtpassword.Text;
-        //cookie1.Expires = DateTime.Now.Add(10)
+        cookie1.Expires = System.DateTime.Now.AddSeconds(30);
         Response.Cookies.Add(cookie1);
     }
 

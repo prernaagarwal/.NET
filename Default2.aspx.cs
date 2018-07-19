@@ -18,14 +18,15 @@ public partial class Default2 : System.Web.UI.Page
 
     private void welcome()
     {
-        if (Request.Cookies["username"] != null && Request.Cookies["password"]!=null)
-        {
-            lblpage2.Text += Request.Cookies["username"];
-        }
-        else
+        if (Request.Cookies["user"] == null)
         {
             lblpage2.Text = "Login First!";
+            //Response.Write("<script>alert('Login First!')</script>");
             Response.Redirect("~/Default.aspx");
+        }
+        else 
+        {
+            lblpage2.Text += " "+Request.Cookies["user"]["username"];
         }
     }
 }
