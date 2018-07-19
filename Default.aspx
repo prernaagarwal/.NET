@@ -11,11 +11,11 @@
     <div>
     <asp:Label ID="lbl1" Text="Cookie Demo:" runat="server"></asp:Label> <br /> <br />
         <asp:Label ID="labelId" runat="server">UserName</asp:Label> 
-        <asp:TextBox ID="username" runat="server" ToolTip="Enter Username"></asp:TextBox> <br />
+        <asp:TextBox ID="txtusername" runat="server" ToolTip="Enter Username"></asp:TextBox> <br />
         <asp:Label ID="labelPass" runat="server">Password  </asp:Label>
-        <asp:TextBox ID="password" TextMode="Password"  ToolTip="Enter Password" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="txtpassword" TextMode="Password"  ToolTip="Enter Password" runat="server"></asp:TextBox><br />
         <br />
-        <asp:Button Text="Submit" runat="server" ID="btn1" />
+        <asp:Button Text="Submit" runat="server" ID="btn1" OnClick="btn1_Click" />
 
     </div>
     </form>
